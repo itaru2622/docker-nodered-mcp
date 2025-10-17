@@ -3,12 +3,13 @@ FROM ${base}
 ARG base=itaru2622/mcp:trixie
 
 # https://github.com/langchain-ai/langgraphjs/blob/main/docs/docs/agents/mcp.md
-RUN npm install -g tsx    @langchain/core langchain @langchain/langgraph @langchain/mcp-adapters @langchain/openai
+RUN npm install -g  @langchain/core langchain @langchain/langgraph @langchain/mcp-adapters @langchain/openai  tsx
 
 # add nod-red
 RUN npm install -g --unsafe-perm node-red
 # add typescript on node-red
-RUN npm install -g node-red-contrib-ts
+RUN npm install -g node-red-contrib-ts \
+                   openapi-red @thingweb/node-red-node-wot node-red-nodegen
 
 # module using node-red function needs to be located in top of node-red-home/node_modules/
 RUN (mkdir -p /root/.node-red; cd /root/.node-red; npm install @langchain/core langchain @langchain/langgraph @langchain/mcp-adapters @langchain/openai )
