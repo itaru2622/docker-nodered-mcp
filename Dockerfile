@@ -27,3 +27,6 @@ RUN (mkdir -p /root/.node-red; cd /root/.node-red; npm install @langchain/core l
 # const initChatModel        = langchainChatModelsUniversal.initChatModel
 # msg.payload = { MultiServerMCPClient, createReactAgent, initChatModel };
 # return msg;
+
+# nodered alternatives
+RUN npm install -g n8n
