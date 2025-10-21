@@ -28,6 +28,7 @@ build:
 start:
 	docker run --name ${cName} \
 	-p 1880:1880 \
+	-p 5678:5678 \
 	-i ${dOpts} ${dnsOpts} \
 	-v ${wDir}:${wDir} -w ${wDir} \
 	${img} ${cmd}
