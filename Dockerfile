@@ -30,3 +30,4 @@ RUN (mkdir -p /root/.node-red; cd /root/.node-red; npm install @langchain/core l
 
 # nodered alternatives
 RUN npm install -g n8n
+RUN npm install -g pnpm turbo typescript @types/node
