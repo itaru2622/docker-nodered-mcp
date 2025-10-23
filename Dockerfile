@@ -8,7 +8,12 @@ RUN npm install -g  @langchain/core langchain @langchain/langgraph @langchain/mc
 # add nod-red
 RUN npm install -g --unsafe-perm node-red
 # add typescript on node-red
-RUN npm install -g node-red-dashboard node-red-contrib-ts \
+RUN npm install -g @flowfuse/node-red-dashboard \
+                   @flowfuse/node-red-dashboard-2-ui-flowviewer \
+                   @flowfuse/node-red-dashboard-2-ui-chat \
+                   node-red-contrib-ui-media \
+                   @inductiv/node-red-openai-api \
+                   node-red-contrib-ts \
                    openapi-red @thingweb/node-red-node-wot node-red-nodegen
 
 # module using node-red function needs to be located in top of node-red-home/node_modules/
