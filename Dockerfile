@@ -8,7 +8,7 @@ RUN npm install -g  @langchain/core langchain @langchain/langgraph @langchain/mc
 # add nod-red
 RUN npm install -g --unsafe-perm node-red
 # add typescript on node-red
-RUN npm install -g node-red-contrib-ts \
+RUN npm install -g node-red-dashboard node-red-contrib-ts \
                    openapi-red @thingweb/node-red-node-wot node-red-nodegen
 
 # module using node-red function needs to be located in top of node-red-home/node_modules/
