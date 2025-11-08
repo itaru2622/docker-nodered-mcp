@@ -20,6 +20,8 @@ dnsOpts ?=-v /etc/resolv.conf:/etc/resolv.conf:ro
 # case2 end
 endif
 
+pull:
+	docker pull ${base}
 build:
 	docker build \
 	--build-arg base=${base} \
