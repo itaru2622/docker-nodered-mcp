@@ -14,6 +14,7 @@ RUN npm install -g @flowfuse/node-red-dashboard \
                    node-red-contrib-ui-media \
                    @inductiv/node-red-openai-api \
                    node-red-contrib-mcp \
+                   @background404/node-red-contrib-llm-plugin \
                    node-red-contrib-ts \
                    openapi-red @thingweb/node-red-node-wot node-red-nodegen
 
