@@ -13,6 +13,7 @@ RUN npm install -g @flowfuse/node-red-dashboard \
                    @flowfuse/node-red-dashboard-2-ui-chat \
                    node-red-contrib-ui-media \
                    @inductiv/node-red-openai-api \
+                   node-red-contrib-mcp \
                    node-red-contrib-ts \
                    openapi-red @thingweb/node-red-node-wot node-red-nodegen
 
