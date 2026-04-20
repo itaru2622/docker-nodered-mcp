@@ -11,6 +11,8 @@ RUN npm install -g --unsafe-perm node-red
 RUN npm install -g @flowfuse/node-red-dashboard \
                    @flowfuse/node-red-dashboard-2-ui-flowviewer \
                    @flowfuse/node-red-dashboard-2-ui-chat \
+                   node-red-admin \
+                   node-red-contrib-credentials \
                    node-red-contrib-ui-media \
                    @inductiv/node-red-openai-api \
                    node-red-contrib-mcp \
