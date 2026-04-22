@@ -3,7 +3,7 @@ FROM ${base}
 ARG base=itaru2622/mcp:trixie
 
 # https://github.com/langchain-ai/langgraphjs/blob/main/docs/docs/agents/mcp.md
-RUN npm install -g  @langchain/core langchain @langchain/langgraph @langchain/mcp-adapters @langchain/openai  tsx
+# RUN npm install -g  @langchain/core langchain @langchain/langgraph @langchain/mcp-adapters @langchain/openai  tsx
 
 # add nod-red
 RUN npm install -g --unsafe-perm node-red
