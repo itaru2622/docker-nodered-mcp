@@ -33,6 +33,7 @@ start:
 	-p 5678:5678 \
 	-i ${dOpts} ${dnsOpts} \
 	-v ${wDir}:${wDir} -w ${wDir} \
+	-e N8N_SECURE_COOKIE=false \
 	${img} ${cmd}
 
 stop:
