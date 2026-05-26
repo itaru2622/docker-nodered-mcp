@@ -18,7 +18,8 @@ RUN npm install -g @flowfuse/node-red-dashboard \
                    node-red-contrib-mcp \
                    @background404/node-red-contrib-llm-plugin \
                    node-red-contrib-ts \
-                   openapi-red @thingweb/node-red-node-wot node-red-nodegen
+                   openapi-red @thingweb/node-red-node-wot node-red-nodegen \
+                   github:itaru2622/nodegen-nodered
 
 # module using node-red function needs to be located in top of node-red-home/node_modules/
 RUN (mkdir -p /root/.node-red; cd /root/.node-red; npm install @langchain/core langchain @langchain/langgraph @langchain/mcp-adapters @langchain/openai )
