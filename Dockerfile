@@ -3,12 +3,12 @@ FROM ${base}
 ARG base=itaru2622/mcp:trixie
 
 # https://github.com/langchain-ai/langgraphjs/blob/main/docs/docs/agents/mcp.md
-# RUN npm install -g  @langchain/core langchain @langchain/langgraph @langchain/mcp-adapters @langchain/openai  tsx
+# RUN pnpm add -g  @langchain/core langchain @langchain/langgraph @langchain/mcp-adapters @langchain/openai  tsx
 
 # add nod-red
-RUN npm install -g --unsafe-perm node-red
+RUN pnpm add -g node-red
 # add typescript on node-red
-RUN npm install -g @flowfuse/node-red-dashboard \
+RUN pnpm add -g @flowfuse/node-red-dashboard \
                    @flowfuse/node-red-dashboard-2-ui-flowviewer \
                    @flowfuse/node-red-dashboard-2-ui-chat \
                    node-red-admin \
@@ -22,7 +22,7 @@ RUN npm install -g @flowfuse/node-red-dashboard \
                    github:itaru2622/nodegen-nodered
 
 # module using node-red function needs to be located in top of node-red-home/node_modules/
-RUN (mkdir -p /root/.node-red; cd /root/.node-red; npm install @langchain/core langchain @langchain/langgraph @langchain/mcp-adapters @langchain/openai )
+RUN (mkdir -p /root/.node-red; cd /root/.node-red; pnpm add @langchain/core langchain @langchain/langgraph @langchain/mcp-adapters @langchain/openai )
 #
 # then you can import above modules in setup tab in function node as below: 
 #  Module name:                     import as
@@ -40,6 +40,6 @@ RUN (mkdir -p /root/.node-red; cd /root/.node-red; npm install @langchain/core l
 
 # nodered alternatives
 RUN npm install -g n8n turbo
-RUN pnpm add -g @n8n/node-cli --global-dir=/usr/local/lib/pnpm --global-bin-dir=/usr/local/bin
+RUN pnpm add -g @n8n/node-cli
 
 EXPOSE 1880 5678
