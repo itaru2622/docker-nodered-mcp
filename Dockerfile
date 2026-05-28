@@ -40,5 +40,6 @@ RUN (mkdir -p /root/.node-red; cd /root/.node-red; npm install @langchain/core l
 
 # nodered alternatives
 RUN npm install -g n8n turbo
+RUN pnpm add -g @n8n/node-cli --global-dir=/usr/local/lib/pnpm --global-bin-dir=/usr/local/bin
 
 EXPOSE 1880 5678
